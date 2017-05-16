@@ -18,6 +18,7 @@ class LogProcessor
 
   def process
     parse
+    display
   end
 
   private
@@ -26,6 +27,7 @@ class LogProcessor
   def parse
     File.open(log_file, 'r').each_line do |line|
       parse_line(line)  
+      return false if @validity == false
     end
   end
 
@@ -39,5 +41,11 @@ class LogProcessor
     data[date][log_level] = data[date][log_level].nil? ? 1 :   data[date][log_level] + 1
 
     @validity = false if date.nil? || log_level.nil?
+  end
+
+  def display
+    data.each do |date, hash|
+      puts "#{date} warning:#{hash['warning']} error:#{hash['error']}"
+    end
   end
 end
