@@ -14,6 +14,10 @@ RSpec >= 3.0
 ```bash
 gem install rspec
 ```
+## How to use?
+```bash
+ruby process.rb example1.log example2.log example3.log
+```
 
 ## How to run test?
 ```bash
