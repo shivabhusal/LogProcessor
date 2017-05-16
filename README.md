@@ -1,5 +1,12 @@
 # LogProcessor
-Process log files and display the report
+This is a ruby script for educational purpose only. I found a problem in the internet and solved. It took me an hour to complete this script in Ruby. It processes log files and display the report in expected format by the problem statement.
+
+## Ideas extractable
+One can easily extract the idea as following from this project:
+- How to extract certain sub-strings following some specific patterns using ReGex in Ruby
+- How to effectively use Data-Structure to keep track of aggregate values.
+- How to start TDD in ruby
+- Testing `STDOUT` in RSpec
 
 ## requirements
 
@@ -32,3 +39,10 @@ rspec log_processor_test.rb -c
 2016-12-15 warning:1 error: 0
 2016-12-16 warning:0 error: 1
 ```
+## Contributing
+
+Bug reports and pull requests are welcome on GitHub at https://github.com/shivabhusal/LogProcessor. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the Contributor Covenant code of conduct.
+
+## License
+
+The script is available as open source under the terms of the MIT License.
