@@ -27,6 +27,10 @@ RSpec.describe LogProcessor do
     `rm valid.log`
   end
 
-  it 'should calculate the report properly'
-  it 'should render the expected output in STDOUT stream'
+  it 'should render the expected output in STDOUT stream' do
+    `echo "2016-12-14 this is a log line 1 [warning]" >> valid.log`
+    lp = LogProcessor.new('valid.log')
+    expect { lp.process}.to  output("2016-12-14 warning:1 error:0\n").to_stdout
+    `rm valid.log`
+  end
 end
