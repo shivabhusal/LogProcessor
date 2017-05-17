@@ -1,5 +1,5 @@
 require 'rspec'
-require './lib/processor.rb'
+require '../lib/processor.rb'
 
 RSpec.describe LogProcessor do
   it 'should validate if the file is a valid log file' do
