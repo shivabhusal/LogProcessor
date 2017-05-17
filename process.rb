@@ -1,4 +1,4 @@
-require './processor'
+require './lib/processor'
 
 file_names_via_arg = ARGV;
 file_names_via_arg.each do |filename|
